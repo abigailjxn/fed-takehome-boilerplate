@@ -1,8 +1,6 @@
 // Example import
 // @import 'example-partial';
 
-$padding: 1em;
-
 // Colors
 $black: #000;
 $text-grey: #acacac;
@@ -12,11 +10,48 @@ $dark-grey: #7f7f7f;
 
 // Fonts
 
+// Mixins
+@mixin button-properties($button-color: $black, $button-font-family: Arial, $button-font-size: 1em, $button-font-color: #fff, $button-border-radius: 7px, $button-padding: .8em 2.8em, $button-margin: 1.5em 1em 1em 0em) {
+    background-color: $button-color;
 
+    font-family: $button-font-family;
+    font-size: $button-font-size;
+    color: $button-font-color;
 
+    border-radius: $button-border-radius;
+    padding: $button-padding;
+    margin: $button-margin;
+}
+
+// Elements
+
+.hero {
+    height: 80vh;
+    background-color: $light-grey;
+    border-bottom: 4px solid $medium-grey;
+}
+
+.articles {
+
+}
+
+.call-to-action {
+
+}
 
 h1 {
+    font-family: Arial, sans-serif;
+    color: $black;
+}
 
+#intro-message {
+    font-size: 1.8em;
+    margin-bottom: 0px;
+}
+
+#main-message {
+    font-size: 3.5em;
+    margin: 0px auto 0px auto;
 }
 
 h2 {
@@ -31,6 +66,10 @@ p {
 
 }
 
+button {
+    @include button-properties;
+}
+
 article {
     img: {
 
@@ -39,7 +78,7 @@ article {
 
     }
     h4 {
-        
+
     }
     p: {
 
