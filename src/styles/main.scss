@@ -15,8 +15,8 @@ $page-margin: 1em;
 
 
 // Fonts
-$arial: Arial;
-$helvetica: Helvetica;
+$arial: Arial, sans-serif;
+$helvetica: Helvetica, sans-serif;
 
 
 // Mixins
@@ -58,7 +58,7 @@ header {
 }
 
 h1 {
-    font-family: Arial, sans-serif;
+    font-family: $arial;
     color: $black;
 }
 
@@ -73,15 +73,16 @@ h1 {
 }
 
 h2 {
+    font-family: $arial;
 
 }
 
 h3 {
-
+    font-family: $arial;
 }
 
 p {
-
+    font-family: $arial;
 }
 
 button {
@@ -93,13 +94,13 @@ article {
 
     }
     h3 {
-
+        font-family: $helvetica;
     }
     h4 {
-
+        font-family: $helvetica;
     }
     p: {
-
+        font-family: $helvetica;
     }
 }
 
