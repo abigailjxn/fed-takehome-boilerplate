@@ -25,10 +25,19 @@ $dark-grey: #7f7f7f;
 
 // Elements
 
+header {
+    border-bottom: 4px solid $black;
+}
+
+.navbar {
+    display:flex;
+}
+
 .hero {
-    height: 80vh;
+    height: 60vh;
     background-color: $light-grey;
     border-bottom: 4px solid $medium-grey;
+    padding: 9em 0em 0em 9em;
 }
 
 .articles {
@@ -46,7 +55,7 @@ h1 {
 
 #intro-message {
     font-size: 1.8em;
-    margin-bottom: 0px;
+    margin: 0px;
 }
 
 #main-message {
