@@ -8,7 +8,16 @@ $light-grey: #ebebeb;
 $medium-grey: #c7c7c7;
 $dark-grey: #7f7f7f;
 
+$border-width: 4px;
+$border-style: solid;
+
+$page-margin: 1em;
+
+
 // Fonts
+$arial: Arial;
+$helvetica: Helvetica;
+
 
 // Mixins
 @mixin button-properties($button-color: $black, $button-font-family: Arial, $button-font-size: 1em, $button-font-color: #fff, $button-border-radius: 7px, $button-padding: .8em 2.8em, $button-margin: 1.5em 1em 1em 0em) {
@@ -26,7 +35,7 @@ $dark-grey: #7f7f7f;
 // Elements
 
 header {
-    border-bottom: 4px solid $black;
+    border-bottom: 3px $border-style $black;
 }
 
 .navbar {
@@ -36,7 +45,7 @@ header {
 .hero {
     height: 60vh;
     background-color: $light-grey;
-    border-bottom: 4px solid $medium-grey;
+    border-bottom: $border-width $border-style $medium-grey;
     padding: 9em 0em 0em 9em;
 }
 
@@ -94,3 +103,21 @@ article {
     }
 }
 
+footer {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0px 2.7em;
+    border-top: 3px $border-style $black;
+
+    font-family: $helvetica;
+    h4 {
+        font-weight: 100;
+        em {
+            font-weight: 600;
+            font-style: normal;
+        }
+    }
+
+
+}
