@@ -346,7 +346,6 @@ footer {
            .navbar{
             //    position: sticky;
                flex-direction: column;
-
            }
        }
    
@@ -420,6 +419,15 @@ footer {
 }
 
 @media only screen and (max-width: 320px){
+    header {
+        #header-designory-logo {
+            margin-left:0;
+        }
+        .navbar-item {
+            margin: 2em;
+        }
+    }
+   
     .hero {
         padding: 2em 0 0 2em;
         #main-message {
