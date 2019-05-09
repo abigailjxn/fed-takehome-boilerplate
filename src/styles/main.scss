@@ -1,5 +1,6 @@
 // Example import
 // @import 'example-partial';
+@import "partials/normalize";
 
 // Colors
 $black: #000;
@@ -259,7 +260,7 @@ footer {
 
 // Media Queries
 
-//Tablet
+//Small Laptop
 @media only screen and (max-width: 1024px) {
     #article-3 {
         display: none;
@@ -291,6 +292,7 @@ footer {
     }
 }
 
+// Tablet
 @media only screen and (max-width: 768px) {
     #article-1 {
         margin: 0;
@@ -303,9 +305,23 @@ footer {
 
 // Mobile
 @media only screen and (max-width: 425px){
-    .large-navbar {
-        display: none;
-    }
+   header {
+       flex-direction: column;
+       .large-navbar {
+           display: none;
+       }
+   
+   
+       .mobile-navbar {
+           display: contents;
+           .navbar{
+            //    display: flex;
+               flex-direction: column;
+
+           }
+       }
+
+   }
 
     .hero {
         padding: 4em 0 0 4em;
