@@ -32,9 +32,9 @@ $helvetica: Helvetica, sans-serif;
     margin: $button-margin;
 }
 
-// @mixin image-content($file) {
-//     content: url(#{$file}.png);
-// }
+@mixin image-content($file) {
+    content: url(#{$file}.png);
+}
 
 // Elements
 
@@ -49,6 +49,7 @@ header {
     list-style-type: none;
 
     padding-left: 0em;
+    margin-block-end: 0em;
 
     font-family: $helvetica;
     font-weight: 100;
@@ -56,9 +57,10 @@ header {
 }
 
 #header-designory-logo {
-    // @include image-content("/assets/designory-logo");
-    width: 100%;
+    @include image-content("/assets/designory-logo");
+    width: 6em;
     height: 100%;
+    margin-left: 3em;
 }
 
 .navbar-item {
@@ -67,7 +69,7 @@ header {
 }
 
 .hero {
-    height: 60vh;
+    height: 57vh;
     background-color: $light-grey;
     border-bottom: $border-width $border-style $medium-grey;
     padding: 9em 0em 0em 9em;
