@@ -314,10 +314,11 @@ footer {
     }
 
     #article-1-img {
-        width: 40vh;
+        width: 38vh;
     }
 
     #call-to-action-text {
+
         p {
             padding: 0;
             word-spacing: 0;
@@ -334,4 +335,33 @@ footer {
          text-align: right;
      }
     }
+}
+
+@media only screen and (max-width: 375px){
+    .hero {
+        padding: 3em 0 0 3em;
+    }
+    #call-to-action-text {
+        h2 {
+            font-size: 2em;
+        }
+        h3 {
+            font-size: 1.3em;
+        }
+        p {
+            font-size: .8em;
+        }
+    }
+
+    #article-1 {
+        #article-1-img {
+            margin: 1em;
+        }
+        h3 {
+            padding-top: 0;
+        }
+    }
+
+
+
 }
