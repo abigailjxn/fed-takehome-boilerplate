@@ -32,14 +32,32 @@ $helvetica: Helvetica, sans-serif;
     margin: $button-margin;
 }
 
+@mixin photo-content($file) {
+    content: url(#{$file}.png);
+}
+
 // Elements
 
 header {
+    display: flex;
+    justify-content: space-between;
     border-bottom: 3px $border-style $black;
 }
 
 .navbar {
-    display:flex;
+    display: flex;
+    list-style-type: none;
+
+    padding-left: 0em;
+
+    font-family: $helvetica;
+    font-weight: 100;
+    color: $dark-grey;
+}
+
+.navbar-item {
+    font-size: .9em;
+    margin: 2em 2.7em 2em 1em; 
 }
 
 .hero {
