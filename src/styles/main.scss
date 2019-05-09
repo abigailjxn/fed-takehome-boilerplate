@@ -131,6 +131,11 @@ article {
   background-color: $white;
   box-shadow: 0 0 2px 2px $medium-grey;
 
+  transition: transform .2s;
+  &:hover {
+    transform:scale(1.03);
+}
+
   img {
     display: block;
     background-color: $light-grey;
