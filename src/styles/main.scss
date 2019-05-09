@@ -95,23 +95,53 @@ header {
 }
 
 article {
-  width: 50vh;
+  width: 52vh;
   height: 50vh;
 
   background-color: $white;
   box-shadow: 0 0 2px 2px $medium-grey;
 
   img {
+      display: block;
+      background-color: $light-grey;
+      height: 45%;
+      width: 48vh;
+      margin: 2vh auto 0 auto;
+
   }
   h3 {
     font-family: $helvetica;
+    font-weight: 400;
+    font-size: 1.9em;
+
+    padding: 1em 0 0 .5em;
+    margin: 0 auto;
+
   }
   h4 {
     font-family: $helvetica;
+    font-weight: 100;
+
+    padding: 0 0 0 1em;
+    margin: 0;
   }
   p {
     font-family: $helvetica;
+    font-weight: 100;
+    font-size: .9em;
+
+    text-align: justify;
+
+    padding: 0em 1em 1em 1em;
   }
+}
+
+#article-2 {
+    background-color: $medium-grey;
+}
+
+#article-3 {
+    background-color: $dark-grey;
 }
 
 .call-to-action {
