@@ -10,7 +10,7 @@ function classToggle() {
     const navs = document.querySelectorAll('.mobile-navbar')
     navs.forEach(nav => nav.classList.toggle('show-mobile-navbar'));
   }
-  
+
 // Listen for icon click and run classToggle function
 document.querySelector('.navicon-toggle')
     .addEventListener('click', classToggle);

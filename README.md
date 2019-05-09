@@ -6,14 +6,14 @@ I generally try to keep my HTML as clean as possible, and do more of the styling
 I also know the header is slightly different than the mock-up, but instead of recreating the logo in Illustrator or Photoshop or using a simple text field and styling it, I found the most recent Designory logo and used that .png instead. 
 
 ## SCSS/CSS
-- Used partials to organize code into meaningful section
+- Used partials to organize code into meaningful sections
 - Used Normalize.css for browser compatibility
 - Created variables for colors and other reusable styles for consistency
 - Styled global elements at the top and went sequentially by section, nesting for clarity and organization
 - Buttons and navbar include user feedback, but are dead links at the moment
 - Various media query breakpoints for accessibilty: Small Laptops, Tablets, and Mobile (L/M/S)
-- Used `em`, `vh`, and `vw`measurements for the most part to make site adjustable in between breakpoints
+- Used `em`, `vh`, and `vw` measurements for the most part to make site adjustable in between breakpoints
 - Used `vh`, and `vw`measurements specifically for adjusting elements to viewport size
 
 ## JS
-- Functions only for navicon animation and to toggle `nav`
+It was not necessary to have much JS scripting other than the functions necessary for the mobile navicon and the navbar. 
