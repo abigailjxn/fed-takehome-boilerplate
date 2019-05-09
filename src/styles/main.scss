@@ -14,166 +14,188 @@ $border-style: solid;
 
 $page-margin: 1em;
 
-
 // Fonts
 $arial: Arial, sans-serif;
 $helvetica: Helvetica, sans-serif;
 
-
 // Mixins
-@mixin button-properties($button-color: $black, $button-font-family: Arial, $button-font-size: 1em, $button-font-color: #fff, $button-border-radius: 7px, $button-padding: .8em 2.8em, $button-margin: 1.5em 1em 1em 0em) {
-    background-color: $button-color;
+@mixin button-properties(
+  $button-color: $black,
+  $button-font-family: Arial,
+  $button-font-size: 1em,
+  $button-font-color: #fff,
+  $button-border-radius: 7px,
+  $button-padding: 0.8em 2.8em,
+  $button-margin: 1.5em 1em 1em 0em
+) {
+  background-color: $button-color;
 
-    font-family: $button-font-family;
-    font-size: $button-font-size;
-    color: $button-font-color;
+  font-family: $button-font-family;
+  font-size: $button-font-size;
+  color: $button-font-color;
 
-    border-radius: $button-border-radius;
-    padding: $button-padding;
-    margin: $button-margin;
+  border-radius: $button-border-radius;
+  padding: $button-padding;
+  margin: $button-margin;
 }
 
 @mixin image-content($file) {
-    content: url(#{$file}.png);
+  content: url(#{$file}.png);
 }
 
 // Elements
 
 // Header
 header {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 3px $border-style $black;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px $border-style $black;
 }
 
 .navbar {
-    display: flex;
-    list-style-type: none;
+  display: flex;
+  list-style-type: none;
 
-    padding-left: 0em;
-    margin-block-end: 0em;
+  padding-left: 0em;
+  margin-block-end: 0em;
 
-    font-family: $helvetica;
-    font-weight: 100;
-    color: $dark-grey;
+  font-family: $helvetica;
+  font-weight: 100;
+  color: $dark-grey;
 }
 
 #header-designory-logo {
-    @include image-content("/assets/designory-logo");
-    width: 6em;
-    height: 100%;
-    margin-left: 3em;
+  @include image-content("/assets/designory-logo");
+  width: 6em;
+  height: 100%;
+  margin-left: 3em;
 }
 
 .navbar-item {
-    font-size: .9em;
-    margin: 2em 2.7em 2em 1em; 
+  font-size: 0.9em;
+  margin: 2em 2.7em 2em 1em;
 }
-
 
 // Main Content Start
 
 // Hero Section
 .hero {
-    height: 57vh;
-    background-color: $light-grey;
-    border-bottom: $border-width $border-style $medium-grey;
-    padding: 9em 0em 0em 9em;
+  height: 57vh;
+  background-color: $light-grey;
+  border-bottom: $border-width $border-style $medium-grey;
+  padding: 9em 0em 0em 9em;
 }
 
 // Articles
 .articles {
-    display: flex;
-    justify-content: center;
-
+  display: flex;
+  justify-content: center;
 }
 
 article {
-    width: 20em;
-    height: 20em;
+  width: 20em;
+  height: 20em;
 
-    background-color: $white;
-    box-shadow: 0 0 2px 2px $medium-grey;
+  background-color: $white;
+  box-shadow: 0 0 2px 2px $medium-grey;
 
+  img {
+  }
+  h3 {
+    font-family: $helvetica;
+  }
+  h4 {
+    font-family: $helvetica;
+  }
+  p {
+    font-family: $helvetica;
+  }
 }
 
 .call-to-action {
-    display: flex;
-    margin: 0 2.7em;
+  display: flex;
+  margin: 4em 2.7em 4em 2.7em;
 }
 
 #call-to-action-img {
-    width: 50%;
+  width: 33em;
+  height: 28em;
+  margin-right: 5em;
 
+  background-color: $dark-grey;
+
+  border: 15px solid $white;
+  box-shadow: 0 0 1px 1px $medium-grey;
 }
 
 #call-to-action-text {
-    width: 50%;
-}
-
-h1 {
-    font-family: $arial;
-    color: $black;
+  h2 {
+    font-size: 2.3em;
+    margin-top: 0;
+    margin-bottom: 0.3em;
+  }
+  h3 {
+    font-size: 1.6em;
+    margin-top: 0;
+  }
+  p {
+      font-size: 1em;
+      font-weight: 600;
+      letter-spacing: 1px;
+      word-spacing: 10px;
+      text-align: justify;
+      padding: 1em 5em 0 0;
+  }
+  width: 50%;
 }
 
 #intro-message {
     font-size: 1.8em;
     margin: 0px;
-}
-
-#main-message {
+  }
+  
+  #main-message {
     font-size: 3.5em;
     margin: 0px auto 0px auto;
+  }
+
+h1 {
+  font-family: $arial;
+  color: $black;
 }
 
-h2 {
-    font-family: $arial;
 
+
+h2 {
+  font-family: $arial;
 }
 
 h3 {
-    font-family: $arial;
+  font-family: $arial;
 }
 
 p {
-    font-family: $arial;
+  font-family: $arial;
 }
 
 button {
-    @include button-properties;
-}
-
-article {
-    img: {
-
-    }
-    h3 {
-        font-family: $helvetica;
-    }
-    h4 {
-        font-family: $helvetica;
-    }
-    p: {
-        font-family: $helvetica;
-    }
+  @include button-properties;
 }
 
 footer {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    margin: 0px 2.7em 2.3em 2.7em;
-    border-top: 3px $border-style $black;
+  margin: 0px 2.7em 2.3em 2.7em;
+  border-top: 3px $border-style $black;
 
-    font-family: $helvetica;
-    h4 {
-        font-size: .75em;
-        font-weight: 100;
-        em {
-            font-weight: 600;
-            font-style: normal;
-        }
+  font-family: $helvetica;
+  h4 {
+    font-size: 0.75em;
+    font-weight: 100;
+    em {
+      font-weight: 600;
+      font-style: normal;
     }
-
-
+  }
 }
