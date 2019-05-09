@@ -169,11 +169,11 @@ article {
   }
 }
 
-#article-2 {
+#article-2-img {
   background-color: $medium-grey;
 }
 
-#article-3 {
+#article-3-img {
   background-color: $dark-grey;
 }
 
@@ -249,4 +249,23 @@ footer {
       font-style: normal;
     }
   }
+}
+
+
+// Media Queries
+
+//Tablet
+@media only screen and (max-width: 768px) {
+    #article-2, #article-3 {
+        display: none;
+    }
+    .articles {
+        justify-content: center;
+    }
+
+    .call-to-action {
+        flex-direction: column-reverse;
+    }
+
+    #call-to-action-img, #call-to-action-text
 }
