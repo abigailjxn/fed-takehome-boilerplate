@@ -1,6 +1,5 @@
-// Example import
-// @import 'example-partial';
 @import "partials/normalize";
+@import "partials/mixins";
 
 // Colors
 $black: #000;
@@ -19,39 +18,10 @@ $page-margin: 2.7em;
 $arial: Arial, sans-serif;
 $helvetica: Helvetica, sans-serif;
 
-// Mixins
-@mixin button-properties(
-  $button-color: $black,
-  $button-font-family: Arial,
-  $button-font-size: 1em,
-  $button-font-color: #fff,
-  $button-border-radius: 7px,
-  $button-padding: 0.8em 2.8em,
-  $button-margin: 1.5em 1em 1em 0em
-) {
-  background-color: $button-color;
-
-  font-family: $button-font-family;
-  font-size: $button-font-size;
-  color: $button-font-color;
-
-  border-radius: $button-border-radius;
-  padding: $button-padding;
-  margin: $button-margin;
-}
-
-@mixin hover-text-color($text-color){
-    &:hover {
-        color: $text-color;
-    }
-}
-
-@mixin image-content($file) {
-  content: url(#{$file}.png);
-}
 
 // Elements
 
+//Global
 h1 {
   color: $black;
 }
@@ -209,6 +179,7 @@ article {
   background-color: $dark-grey;
 }
 
+// Call to Action Section
 .call-to-action {
   display: flex;
   margin: 4em $page-margin;
@@ -265,6 +236,7 @@ button {
   }
 }
 
+// Footer 
 footer {
   display: flex;
   justify-content: space-between;
@@ -282,7 +254,6 @@ footer {
     }
   }
 }
-
 
 // Media Queries
 
