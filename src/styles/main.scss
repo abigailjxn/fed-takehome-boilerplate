@@ -339,11 +339,12 @@ footer {
 
        .navicon {
            display:block;
+           margin: 2em 2em;
        }
        .mobile-navbar {
            display: none;
            .navbar{
-            //    display: flex;
+            //    position: sticky;
                flex-direction: column;
 
            }
@@ -351,6 +352,7 @@ footer {
    
        .show-mobile-navbar{
            display: flex;
+           
        }
    
 
