@@ -45,6 +45,13 @@ $helvetica: Helvetica, sans-serif;
 
 // Elements
 
+h1 {
+    color: $black;
+  }
+h1, h2, h3, p {
+    font-family: $arial;
+  }
+
 // Header
 header {
   display: flex;
@@ -92,6 +99,9 @@ header {
   justify-content: space-between;
 
   margin: 0 $page-margin;
+
+  position: relative;
+  top: -3em;
 }
 
 article {
@@ -190,25 +200,6 @@ article {
     font-size: 3.5em;
     margin: 0px auto 0px auto;
   }
-
-h1 {
-  font-family: $arial;
-  color: $black;
-}
-
-
-
-h2 {
-  font-family: $arial;
-}
-
-h3 {
-  font-family: $arial;
-}
-
-p {
-  font-family: $arial;
-}
 
 button {
   @include button-properties;
