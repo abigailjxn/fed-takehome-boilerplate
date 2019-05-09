@@ -73,6 +73,10 @@ header {
   border-bottom: 3px $border-style $black;
 }
 
+.mobile-navbar {
+    display: none;
+}
+
 .navbar {
   display: flex;
   list-style-type: none;
@@ -264,6 +268,7 @@ footer {
     #article-1 {
         margin-right: 1em;
     }
+
     .articles {
         justify-content: center;
     }
@@ -293,4 +298,40 @@ footer {
 }
 
 // Mobile
-// @media only screen and (max-width: )
+@media only screen and (max-width: 425px){
+    .large-navbar {
+        display: none;
+    }
+
+    .hero {
+        padding: 4em 0 0 4em;
+        #intro-message {
+            font-size: 1.1em;
+        }
+        #main-message {
+            font-size: 1.8em;
+        }
+    }
+
+    #article-1-img {
+        width: 40vh;
+    }
+
+    #call-to-action-text {
+        p {
+            padding: 0;
+            word-spacing: 0;
+        }
+    }
+
+    #call-to-action-img {
+        height: 80vw;
+        width: 80vw;
+    }
+
+    footer {
+     #footer-copyright {
+         text-align: right;
+     }
+    }
+}
