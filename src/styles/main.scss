@@ -39,6 +39,12 @@ $helvetica: Helvetica, sans-serif;
   margin: $button-margin;
 }
 
+@mixin hover-text-color($text-color){
+    &:hover {
+        color: $text-color;
+    }
+}
+
 @mixin image-content($file) {
   content: url(#{$file}.png);
 }
@@ -46,11 +52,18 @@ $helvetica: Helvetica, sans-serif;
 // Elements
 
 h1 {
-    color: $black;
-  }
-h1, h2, h3, p {
-    font-family: $arial;
-  }
+  color: $black;
+}
+h1,
+h2,
+h3,
+p {
+  font-family: $arial;
+}
+
+a {
+  text-decoration: none;
+}
 
 // Header
 header {
@@ -69,6 +82,13 @@ header {
   font-family: $helvetica;
   font-weight: 100;
   color: $dark-grey;
+}
+
+.navbar-item {
+    transition: transform .2s;
+    &:hover {
+        transform:scale(1.1);
+    }
 }
 
 #header-designory-logo {
@@ -112,21 +132,19 @@ article {
   box-shadow: 0 0 2px 2px $medium-grey;
 
   img {
-      display: block;
-      background-color: $light-grey;
-      height: 45%;
-      width: 48vh;
-      margin: 2vh auto 0 auto;
-
+    display: block;
+    background-color: $light-grey;
+    height: 45%;
+    width: 48vh;
+    margin: 2vh auto 0 auto;
   }
   h3 {
     font-family: $helvetica;
     font-weight: 400;
     font-size: 1.9em;
 
-    padding: 1em 0 0 .5em;
+    padding: 1em 0 0 0.5em;
     margin: 0 auto;
-
   }
   h4 {
     font-family: $helvetica;
@@ -138,7 +156,7 @@ article {
   p {
     font-family: $helvetica;
     font-weight: 100;
-    font-size: .9em;
+    font-size: 0.9em;
 
     text-align: justify;
 
@@ -147,11 +165,11 @@ article {
 }
 
 #article-2 {
-    background-color: $medium-grey;
+  background-color: $medium-grey;
 }
 
 #article-3 {
-    background-color: $dark-grey;
+  background-color: $dark-grey;
 }
 
 .call-to-action {
@@ -181,28 +199,33 @@ article {
     margin-top: 0;
   }
   p {
-      font-size: 1em;
-      font-weight: 600;
-      letter-spacing: 1px;
-      word-spacing: 10px;
-      text-align: justify;
-      padding: 1em 5em 5em 0;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+    text-align: justify;
+    padding: 1em 5em 5em 0;
   }
   width: 50%;
 }
 
 #intro-message {
-    font-size: 1.8em;
-    margin: 0px;
-  }
-  
-  #main-message {
-    font-size: 3.5em;
-    margin: 0px auto 0px auto;
-  }
+  font-size: 1.8em;
+  margin: 0px;
+}
+
+#main-message {
+  font-size: 3.5em;
+  margin: 0px auto 0px auto;
+}
 
 button {
   @include button-properties;
+  @include hover-text-color($black);
+  &:hover {
+      background-color: $light-grey;
+      border-color: $black;
+  }
 }
 
 footer {
