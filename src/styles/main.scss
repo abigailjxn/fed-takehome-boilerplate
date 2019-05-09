@@ -32,9 +32,9 @@ $helvetica: Helvetica, sans-serif;
     margin: $button-margin;
 }
 
-@mixin photo-content($file) {
-    content: url(#{$file}.png);
-}
+// @mixin image-content($file) {
+//     content: url(#{$file}.png);
+// }
 
 // Elements
 
@@ -53,6 +53,12 @@ header {
     font-family: $helvetica;
     font-weight: 100;
     color: $dark-grey;
+}
+
+#header-designory-logo {
+    // @include image-content("/assets/designory-logo");
+    width: 100%;
+    height: 100%;
 }
 
 .navbar-item {
