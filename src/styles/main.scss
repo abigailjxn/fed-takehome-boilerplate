@@ -62,6 +62,7 @@ p {
 }
 
 a {
+    color: $dark-grey;
   text-decoration: none;
 }
 
@@ -265,7 +266,18 @@ footer {
 
     .call-to-action {
         flex-direction: column-reverse;
+        margin: 0 0 4em 0;
     }
 
-    #call-to-action-img, #call-to-action-text
+    #call-to-action-img, #call-to-action-text {
+        margin: auto;
+    }
+
+    #call-to-action-text {
+        width: 70%;
+        p {
+            padding-bottom: 3em;
+        }
+        margin-bottom: 3em;
+    }
 }
